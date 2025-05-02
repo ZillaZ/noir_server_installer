@@ -51,10 +51,10 @@ fn main() {
 		return
 	}
 	server_config_path := build_path([config_path, 'Noir', 'Server'])
-	if !os.exists(server_config_path) {
-		os.mkdir(build_path([config_path, 'Noir'])) or {}
-		os.mkdir(server_config_path) or {}
-	}
+	os.mkdir(build_path([config_path, 'Noir'])) or {}
+	os.mkdir(server_config_path) or {}
+	os.mkdir(build_path([server_config_path, 'logs'])) or {}
+	os.mkdir(build_path([server_config_path, 'envs'])) or {}
 	println('Created config directories at ${server_config_path}')
 	println("You're almost ready! Just add ${install_path} to your PATH.\nRead about server configuration on https://github.com/ZillaZ/noir_cicd_server")
 }
