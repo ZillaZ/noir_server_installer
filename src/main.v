@@ -33,9 +33,9 @@ fn main() {
 	}
 	println("Downloading precompiled binary from Github...")
 	base_url := $if linux {
-		'https://github.com/ZillaZ/noir_cicd_server/releases/download/release/cicd_server-unix64'
+		'https://github.com/ZillaZ/noir_cicd_server/releases/download/release/noir_server-unix64'
 	} $else {
-		'https://github.com/ZillaZ/noir_cicd_server/releases/download/release/cicd_server-win64.exe'
+		'https://github.com/ZillaZ/noir_cicd_server/releases/download/release/noir_server-win64.exe'
 	}
 	binary_name := $if linux {
 		'noir_server'
